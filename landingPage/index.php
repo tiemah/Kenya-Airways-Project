@@ -52,10 +52,8 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
-                    <a href="#packages" class="nav-item nav-link">Packages</a>
                     <a href="#services" class="nav-item nav-link">Services</a>
-                    
-                    
+                    <a href="#packages" class="nav-item nav-link">Packages</a>                                     
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <!-- <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a> -->
@@ -63,8 +61,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                       <ul class="dropdown-menu drop_1 " aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="pas-login.php">Passenger</a></li>
-                          <li><a class="dropdown-item" href="admin-login.php">Admin</a></li>
+                          <li><a class="dropdown-item" href="../pas-login.php">Passenger</a></li>
+                          <li><a class="dropdown-item" href="../admin-login.php">Admin</a></li>
                       </ul>
                     </li>
                 </ul>
