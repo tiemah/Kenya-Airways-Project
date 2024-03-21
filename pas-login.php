@@ -25,11 +25,8 @@ if(isset($_GET['error'])) {
 
 </head>
 <body>
-<div class="container">
-        <div class="legend">
-            <img src="images/airtic.png" alt="Plane Image">
-        </div>
-        <h1>SIGN IN</h1> 
+<div class="container" id="login">
+        <h1 style="color:white;" class="mt-3">SIGN IN</h1> 
         <form action="includes/pas-login.inc.php" method="POST">
             <div class="form-row">
                    
@@ -54,24 +51,21 @@ if(isset($_GET['error'])) {
                 </div>  -->
 
                 <div class="row mt-4">
-                    <div class="col">
-                        <a href="pas-register.php">
-                        <button type="button" class="btn btn-info mt-3">
-                            <div style="font-size: 1.5rem;">
-                            <i class="fa fa-user-plus text-light"></i> Register
-                            </div>
-                        </button>
-                        </a> 
-                    </div>
+                 
 
-                    <div class="col">
+                    <div class="col text-center">
                         <button name="login_but" type="submit" class="btn btn-success mt-3">
-                        <div style="font-size: 1.5rem;">
+                        <div style="font-size: 1.5 rem;">
                             <i class="fa fa-lg fa-arrow-right"></i> Login
                         </div>
                         </button>
                     </div>
                  </div>
+                 <div class="col d-inline-flex flex-row mt-3 mb-0 ">
+                 <h6>don't have an account?</h6>
+                        <a href="pas-register.php">REGISTER
+                        </a> 
+                    </div>
         </form> 
 <div class="col-md-3"></div>             
 </div> 
