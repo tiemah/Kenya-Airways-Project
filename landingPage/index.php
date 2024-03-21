@@ -54,7 +54,7 @@
                     <a href="#about" class="nav-item nav-link">About</a>
                     <a href="#services" class="nav-item nav-link">Services</a>
                     <a href="#packages" class="nav-item nav-link">Packages</a>                                     
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="./contact.php" class="nav-item nav-link">Contact</a>
                 </div>
                 <!-- <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a> -->
                 <ul class="nav navbar-nav navbar-right">
