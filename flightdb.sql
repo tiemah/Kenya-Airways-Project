@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307:3307
--- Generation Time: Jul 27, 2023 at 06:35 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: 127.0.0.1
+-- Generation Time: Mar 21, 2024 at 08:54 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`admin_id`, `admin_uname`, `admin_email`, `admin_pwd`) VALUES
 (1, 'admin', 'admin@mail.com', '$2y$10$KRXGkY.dxYjD8FLZclW/Tu04wl76lD7IA4Z3nAsxtpdZxHNbYo4ZW'),
-(2, 'Benjamin', 'kibunjabens@gmail.com', '$2y$10$XIsl0wTFvP5vYDiPFlM0mODcRpKl/oSz0IIhBouRBLoFFwfoAIsWS');
+(2, 'Margaret', 'margaret@gmail.com', '$2y$10$XIsl0wTFvP5vYDiPFlM0mODcRpKl/oSz0IIhBouRBLoFFwfoAIsWS'),
+(3, 'admin@gmail.com', 'admin@gmail.com', '$2y$10$zk/ueikLytL9mmfG96G6g.7FnSyjpMOWbavy5JXbVhrAtM91uBq12');
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,38 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`contact_id`, `FirstName`, `LastName`, `Phone`, `Email`, `Message`, `registration_date`) VALUES
-(1, 'colin', 'kebaso', '0795030657', 'colinnyamiaka@gmail.com', 'Find my progress', '2023-07-09 00:02:26');
+(1, 'Margaret', 'Irungu', '0799123282', 'margaret@gmail.com', 'Find my progress', '2023-12-09 00:02:26');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `flights`
+--
+
+CREATE TABLE `flights` (
+  `flight_id` int(11) NOT NULL,
+  `admin_id` int(11) NOT NULL,
+  `source` varchar(50) NOT NULL,
+  `destination` varchar(50) NOT NULL,
+  `departure` datetime NOT NULL,
+  `arrival` datetime NOT NULL,
+  `flightname` varchar(50) NOT NULL,
+  `Aseats` int(11) NOT NULL,
+  `Aprice` int(11) NOT NULL,
+  `Bseats` int(11) NOT NULL,
+  `Bprice` int(11) NOT NULL,
+  `Cseats` int(11) NOT NULL,
+  `Cprice` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `flights`
+--
+
+INSERT INTO `flights` (`flight_id`, `admin_id`, `source`, `destination`, `departure`, `arrival`, `flightname`, `Aseats`, `Aprice`, `Bseats`, `Bprice`, `Cseats`, `Cprice`) VALUES
+(1, 4, 'Kisumu', 'Mombasa', '2024-03-19 13:58:00', '2024-03-19 18:05:00', 'Kenya Airways', 23, 25000, 36, 24000, 72, 20000),
+(2, 3, 'Kisumu', 'Nairobi', '2024-03-19 13:17:00', '2024-03-19 19:23:00', 'Kenya Airways', 24, 25000, 36, 24000, 72, 23000),
+(0, 3, 'Kisumu', 'Nairobi', '2024-03-21 10:00:00', '2024-03-22 01:00:00', 'Kenya Airways', 20, 10000, 30, 8000, 40, 7000);
 
 -- --------------------------------------------------------
 
@@ -89,23 +121,7 @@ CREATE TABLE `passenger_profile` (
 --
 
 INSERT INTO `passenger_profile` (`passenger_id`, `user_id`, `flight_id`, `mobile`, `dob`, `Id_number`, `f_name`, `m_name`, `l_name`, `class`) VALUES
-(24, 8, 22, 757303561, '2023-06-26', 34567534, 'John', 'Juma', 'Ochieng', 'B'),
-(31, 8, 22, 757303561, '2023-06-26', 34567534, 'Juma', 'Juma', 'Ochieng', 'A'),
-(33, 8, 22, 757303561, '2023-06-26', 34567534, 'Juma', 'Juma', 'Ochieng', 'A'),
-(34, 8, 22, 757303561, '2023-06-26', 34567534, 'Juma', 'Juma', 'Ochieng', 'A'),
-(35, 8, 22, 757303561, '2023-06-26', 34567534, 'Juma', 'Juma', 'Ochieng', 'A'),
-(36, 8, 22, 706954260, '2023-07-02', 35303589, 'Benjamin', 'Kibunja', 'Mburu', 'B'),
-(37, 8, 23, 790487504, '2023-07-26', 37731787, 'Kashingi', 'Morris', 'Juma', 'B'),
-(38, 8, 23, 746350811, '2023-07-25', 37731868, 'Juma ', 'Kashingi', 'Katana', 'B'),
-(39, 8, 22, 795030657, '2023-06-25', 39133533, 'David', 'Kiarie', 'Mburu', 'C'),
-(40, 8, 22, 743690494, '2023-07-02', 35308834, 'Luke', 'Olende', 'Ochieng', 'C'),
-(41, 9, 23, 795030657, '2023-07-11', 39133533, 'Colin', 'Nyamiaka', 'kebaso', 'C'),
-(42, 9, 23, 706954260, '2023-07-12', 35308834, 'Benjamin', 'Kibunja', 'Mburu', 'C'),
-(43, 9, 23, 795030657, '2023-07-11', 35308834, 'Colin', 'Nyamiaka', 'Kashingi', 'B'),
-(44, 9, 23, 795030657, '2023-07-04', 39133533, 'Luke', 'Nyamiaka', 'Mburu', 'B'),
-(45, 10, 21, 765704528, '2023-07-19', 37731787, 'Kashingi', 'Morris', 'Kashingi', 'C'),
-(46, 10, 23, 795030657, '2023-07-25', 37731787, 'Kashingi', 'Morris', 'Kashingi', 'C'),
-(47, 10, 23, 795030657, '2023-01-01', 33333333, 'Juma', 'Nyamiaka', 'kebaso', 'C');
+(48, 11, 1, 799123282, '2000-01-19', 12345678, 'Margaret', 'Wanjiku', 'Irungu', 'A');
 
 -- --------------------------------------------------------
 
@@ -131,7 +147,8 @@ INSERT INTO `payment` (`flight_id`, `passenger_id`, `payment_method`, `phone_no`
 (22, 37, 'equity', 795030657, '2023-07-26', 20000),
 (23, 43, 'equity', 795030657, '2023-07-27', 24000),
 (10, 43, 'mpesa', 343434343, '2023-07-11', 500),
-(23, 47, 'Mpesa', 2147483647, '2023-07-27', 10000);
+(23, 47, 'Mpesa', 2147483647, '2023-07-27', 10000),
+(1, 1, 'Mpesa', 799123282, '2024-03-21', 25000);
 
 -- --------------------------------------------------------
 
@@ -152,7 +169,7 @@ CREATE TABLE `pwdreset` (
 --
 
 INSERT INTO `pwdreset` (`pwd_reset_id`, `pwd_reset_email`, `pwd_reset_selector`, `pwd_reset_token`, `pwd_reset_expires`) VALUES
-(3, 'colinnyamiaka@gmail.com', '05bbfb8e7f0196c9', '$2y$10$EzkutlFHR/nScdU9DOHN5u0MWAJoFnp5iSQ0zlCsOe0ows9PA76Ju', '1688740376');
+(3, 'doreen@gmail.com', '05bbfb8e7f0196c9', '$2y$10$EzkutlFHR/nScdU9DOHN5u0MWAJoFnp5iSQ0zlCsOe0ows9PA76Ju', '1688740376');
 
 -- --------------------------------------------------------
 
@@ -182,7 +199,8 @@ INSERT INTO `ticket` (`ticket_id`, `passenger_id`, `flight_id`, `user_id`, `seat
 (31, 38, 22, 8, '29', 10000, 'C', 1057515165),
 (32, 43, 23, 9, '16', 12000, 'B', 1268843498),
 (33, 44, 23, 9, '3', 12000, 'B', 1268843498),
-(34, 47, 23, 10, '47', 10000, 'C', 1296578120);
+(34, 47, 23, 10, '47', 10000, 'C', 1296578120),
+(35, 1, 1, 11, '41', 25000, 'A', 255119808);
 
 -- --------------------------------------------------------
 
@@ -202,13 +220,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`) VALUES
-(1, 'christine', 'christine@mail.com', '$2y$10$KRXGkY.dxYjD8FLZclW/Tu04wl76lD7IA4Z3nAsxtpdZxHNbYo4ZW'),
-(2, 'henry', 'henry@mail.com', '$2y$10$KRXGkY.dxYjD8FLZclW/Tu04wl76lD7IA4Z3nAsxtpdZxHNbYo4ZW'),
-(3, 'andre', 'andre@mail.com', '$2y$10$KRXGkY.dxYjD8FLZclW/Tu04wl76lD7IA4Z3nAsxtpdZxHNbYo4ZW'),
-(4, 'james', 'james@mail.com', '$2y$10$KRXGkY.dxYjD8FLZclW/Tu04wl76lD7IA4Z3nAsxtpdZxHNbYo4ZW'),
-(8, 'Colin', 'colinnyamiaka@gmail.com', '$2y$10$e3bt5BAYUiha3xAuFUkHLOQ878dKA8mgY.hlYE0noYLTKoeoAPDbm'),
-(9, 'Kebaso', 'kebasocolin@gmail.com', '$2y$10$diEx.18z7S6NKE/.qG2yUeAMAkNvlpfOXzF/OsyLnyFU5gNMPfBoK'),
-(10, 'Kashing74', 'moriskashing74@gmail.com', '$2y$10$G1KTRAE0m/YYf/noYS6utOwJycCP9pqPUiNTZrY0VOQQUClCcc2X.');
+(11, 'irungumargaret93@gma', 'irungumargaret93@gmail.com', '$2y$10$7KaGyCTvB.qML.1bI6OQI.mEsYLWqjXhxbByd5tqI.nVp7mxK9/J2'),
+(12, 'doreen', 'doreen@gmail.com', '$2y$10$jzz1bpWuvs3QHPZTS6g5WuMMKmwzXTM.6Z536V6GGhPqT0X7WoYn2');
 
 --
 -- Indexes for dumped tables
@@ -270,7 +283,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -282,7 +295,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `passenger_profile`
 --
 ALTER TABLE `passenger_profile`
-  MODIFY `passenger_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `passenger_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `pwdreset`
@@ -294,59 +307,15 @@ ALTER TABLE `pwdreset`
 -- AUTO_INCREMENT for table `ticket`
 --
 ALTER TABLE `ticket`
-  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `passenger_profile`
---
-ALTER TABLE `passenger_profile`
-  ADD CONSTRAINT `passenger_profile_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
-  ADD CONSTRAINT `passenger_profile_ibfk_2` FOREIGN KEY (`flight_id`) REFERENCES `flights` (`flight_id`);
-
---
--- Constraints for table `payment`
---
-ALTER TABLE `payment`
-  ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`flight_id`) REFERENCES `flights` (`flight_id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`passenger_id`) REFERENCES `passenger_profile` (`passenger_id`) ON DELETE CASCADE;
-
---
--- Constraints for table `ticket`
---
-ALTER TABLE `ticket`
-  ADD CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`passenger_id`) REFERENCES `passenger_profile` (`passenger_id`),
-  ADD CONSTRAINT `ticket_ibfk_2` FOREIGN KEY (`flight_id`) REFERENCES `flights` (`flight_id`),
-  ADD CONSTRAINT `ticket_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-/*CREATE TABLE `Flights` (
-  `flight_id` INT NOT NULL AUTO_INCREMENT,
-  `admin_id` INT NOT NULL,
-  `source` VARCHAR(50) NOT NULL,
-  `destination` VARCHAR(50) NOT NULL,
-  `departure` DATETIME NOT NULL,
-  `arrival` DATETIME NOT NULL,
-  `flightname` VARCHAR(50) NOT NULL,
-  `Aseats` INT NOT NULL,
-  `Aprice` INT NOT NULL,
-  `Bseats` INT NOT NULL,
-  `Bprice` INT NOT NULL,
-  `Cseats` INT NOT NULL,
-  `Cprice` INT NOT NULL,
-  PRIMARY KEY (`flight_id`)
-);
-*/

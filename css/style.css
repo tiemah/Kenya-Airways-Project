@@ -10,11 +10,34 @@ body{
         margin-top:50px;
         text-align:center;
     }
+    #login{
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    #bt{
+        background-color:green;
+        border: 1px solid #ccc;
+    }
+    .error-message {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
+    
+    #register{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     .container {
         width: 500px;
         margin: 0 auto;
         padding: 40px;
-        background-color: rgb(106, 121, 106);
+        background-color:green;
+        color:white;
         border: 1px solid #ccc;
         border-radius: 20px;
         box-shadow: 0 0 5px rgba(0, 0 , 0 0.1);
