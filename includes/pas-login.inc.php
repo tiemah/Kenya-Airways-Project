@@ -3,7 +3,7 @@ if(isset($_POST['login_but'])) {
     require '../includes/dbconn.php';   
     $email_id = $_POST['user_id'];
     $password = $_POST['user_pass'];
-    $sql = 'SELECT * FROM Users WHERE username=? OR email=?;';
+    $sql = 'SELECT * FROM users WHERE username=? OR email=?;';
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)) {
         header('Location: ../pas-login.php?error=sqlerror');

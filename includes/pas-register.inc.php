@@ -22,7 +22,7 @@ if (isset($_POST['signup_submit'])) {
     }
 
     // Check if username already exists
-    $username_sql = 'SELECT username FROM Users WHERE username=?';
+    $username_sql = 'SELECT username FROM users WHERE username=?';
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $username_sql)) {
         header('Location: ../pas-register.php?error=sqlerror');
@@ -39,7 +39,7 @@ if (isset($_POST['signup_submit'])) {
     }
 
     // Check if email already exists
-    $email_sql = 'SELECT email FROM Users WHERE email=?';
+    $email_sql = 'SELECT email FROM users WHERE email=?';
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $email_sql)) {
         header('Location: ../pas-register.php?error=sqlerror');
@@ -56,7 +56,7 @@ if (isset($_POST['signup_submit'])) {
     }
 
     // Insert new user
-    $sql = 'INSERT INTO Users (username, email, password) VALUES (?, ?, ?)';
+    $sql = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header('Location: ../pas-register.php?error=sqlerror');
