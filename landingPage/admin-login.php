@@ -48,18 +48,20 @@ if(isset($_GET['error'])) {
 
            
 
-            <form action="../includes/pas-login.inc.php" method="POST">
+            <form action="../includes/admin-login.inc.php" method="POST">
 
                 <label for="user_id" class="form-label text-dark mt-3">Username or E-mail:</label>
                 <input type="text" name="user_id" id="user_id" class="form-control" placeholder="e.g johndoe@gmail.com" required>
+                <!-- <input type="text" name="user_id" id="user_id" placeholder="Enter your email/Username"  required> -->
 
                 <label for="user_pass" class="form-label text-dark mt-3">Password:</label>
-                <input type="password" name="user_pass" class="form-control" minlength="4" maxlength="12" placeholder="e.g 12234@ke" required>
+                <input type="password" name="user_pass" id="user_pass" class="form-control" minlength="4" maxlength="12" placeholder="e.g 12234@ke" required>
+                <!-- <input type="password" name="user_pass" id="user_pass" placeholder="Enter your password"  required> -->
 
                 <input type="submit" class="btn btn-primary mt-5 mx-5" value="SUBMIT" name="login_but" style="border-radius: 30px;">
                 <input type="submit" class="btn btn-primary mt-5" value="RESET" style="margin-left: 250px; border-radius:30px;">
 
-                <p class="text-dark my-5">Not registered? <a href="register.php">Register Today</a></p>    
+                <!-- <p class="text-dark my-5">Not registered? <a href="register.php">Register Today</a></p>     -->
         </form>
         </div>
     </div>
