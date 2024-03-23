@@ -62,7 +62,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                       <ul class="dropdown-menu drop_1 " aria-labelledby="navbarDropdown">
                           <li><a class="dropdown-item" href="pas-login.php">Passenger</a></li>
-                          <li><a class="dropdown-item" href="../admin-login.php">Admin</a></li>
+                          <li><a class="dropdown-item" href="admin-login.php">Admin</a></li>
                       </ul>
                     </li>
                 </ul>
