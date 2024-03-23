@@ -14,8 +14,8 @@ if(isset($_POST['signup_submit'])) {
         exit();
     }
     else {
-        $username_sql = 'SELECT admin_uname FROM Admin WHERE admin_uname=?';
-        $email_sql = 'SELECT admin_email FROM Admin WHERE admin_email=?';
+        $username_sql = 'SELECT admin_uname FROM admin WHERE admin_uname=?';
+        $email_sql = 'SELECT admin_email FROM admin WHERE admin_email=?';
         $stmt_uname = mysqli_stmt_init($conn);
         $stmt_email = mysqli_stmt_init($conn);
         mysqli_stmt_prepare($stmt_uname,$username_sql);
@@ -38,7 +38,7 @@ if(isset($_POST['signup_submit'])) {
             } else {
                 mysqli_stmt_close($stmt_uname);
                 mysqli_stmt_close($stmt_email);
-                $sql = "INSERT INTO Admin(admin_uname,admin_email,admin_pwd) VALUES
+                $sql = "INSERT INTO admin(admin_uname,admin_email,admin_pwd) VALUES
                   (?,?,?)";
                 $pwd_hash = password_hash($password, PASSWORD_DEFAULT);
                 $stmt = mysqli_stmt_init($conn);
@@ -48,7 +48,7 @@ if(isset($_POST['signup_submit'])) {
                 mysqli_stmt_close($stmt);
 
                 // Sign in the user
-                $sql = 'SELECT * FROM Admin WHERE admin_uname=? OR admin_email=?';
+                $sql = 'SELECT * FROM admin WHERE admin_uname=? OR admin_email=?';
                 $stmt = mysqli_stmt_init($conn);
                 mysqli_stmt_prepare($stmt,$sql);
                 mysqli_stmt_bind_param($stmt,'ss',$email_id,$email_id);            
