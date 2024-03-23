@@ -11,10 +11,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="#about" class="nav-item nav-link">About</a>
-                    <a href="#packages" class="nav-item nav-link">Packages</a>
-                    <a href="#services" class="nav-item nav-link">Services</a>
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="index.php#about" class="nav-item nav-link">About</a>
+                    <a href="index.php#packages" class="nav-item nav-link">Packages</a>
+                    <a href="index.php#services" class="nav-item nav-link">Services</a>
                     
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
