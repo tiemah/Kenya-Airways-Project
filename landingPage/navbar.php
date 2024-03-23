@@ -16,7 +16,7 @@
                     <a href="index.php#packages" class="nav-item nav-link">Packages</a>
                     <a href="index.php#services" class="nav-item nav-link">Services</a>
                     
-                    <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="destination.html" class="dropdown-item">Destination</a>
@@ -25,7 +25,7 @@
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
-                    </div>
+                    </div> -->
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <!-- <a href="register.php" class="btn btn-primary rounded-pill py-2 px-4">Register</a> -->
