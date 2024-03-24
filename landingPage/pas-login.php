@@ -57,7 +57,7 @@ if(isset($_GET['error'])) {
                 <input type="submit" class="btn btn-primary mt-5 mx-5" value="SUBMIT" name="login_but" style="border-radius: 30px;">
                 <input type="submit" class="btn btn-primary mt-5" value="RESET" style="border-radius:30px;">
 
-                <p class="text-dark my-5">Not registered? <a href="register.php">Register Today</a></p>    
+                <p class="text-dark my-5">Not registered? <a href="./pas-register.php">Register Today</a></p>    
         </form>
         </div>
     </div>
