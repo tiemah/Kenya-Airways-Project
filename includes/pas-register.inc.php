@@ -11,13 +11,13 @@ if (isset($_POST['signup_submit'])) {
 
     // Check for invalid email format
     if (!filter_var($email_id, FILTER_VALIDATE_EMAIL)) {
-        header('Location: ../pas-register.php?error=invalidemail');
+        header('Location: ../landingPage/pas-register.php?error=invalidemail');
         exit();
     }
 
     // Check if passwords match
     if ($password !== $password_repeat) {
-        header('Location: ../pas-register.php?error=pwdnotmatch');
+        header('Location: ../landingPage/pas-register.php?error=pwdnotmatch');
         exit();
     }
 
@@ -25,7 +25,7 @@ if (isset($_POST['signup_submit'])) {
     $username_sql = 'SELECT username FROM users WHERE username=?';
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $username_sql)) {
-        header('Location: ../pas-register.php?error=sqlerror');
+        header('Location: ../landingPage/pas-register.php?error=sqlerror');
         exit();
     }
 
@@ -34,7 +34,7 @@ if (isset($_POST['signup_submit'])) {
     mysqli_stmt_store_result($stmt);
     $username_check = mysqli_stmt_num_rows($stmt);
     if ($username_check > 0) {
-        header('Location: ../pas-register.php?error=usernameexists');
+        header('Location: ../landingPage/pas-register.php?error=usernameexists');
         exit();
     }
 
@@ -42,7 +42,7 @@ if (isset($_POST['signup_submit'])) {
     $email_sql = 'SELECT email FROM users WHERE email=?';
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $email_sql)) {
-        header('Location: ../pas-register.php?error=sqlerror');
+        header('Location: ../landingPage/pas-register.php?error=sqlerror');
         exit();
     }
 
@@ -51,7 +51,7 @@ if (isset($_POST['signup_submit'])) {
     mysqli_stmt_store_result($stmt);
     $email_check = mysqli_stmt_num_rows($stmt);
     if ($email_check > 0) {
-        header('Location: ../pas-register.php?error=emailexists');
+        header('Location: ../landingPage/pas-register.php?error=emailexists');
         exit();
     }
 
@@ -59,7 +59,7 @@ if (isset($_POST['signup_submit'])) {
     $sql = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header('Location: ../pas-register.php?error=sqlerror');
+        header('Location: ../landingPage/pas-register.php?error=sqlerror');
         exit();
     }
 
@@ -68,10 +68,10 @@ if (isset($_POST['signup_submit'])) {
     mysqli_stmt_execute($stmt);
 
     // Redirect to login page with success message
-    header('Location: ../pas-login.php?signup=success');
+    header('Location: ../landingPage/pas-login.php?signup=success');
     exit();
 } else {
     // Redirect to registration page if signup_submit is not set
-    header('Location: ../pas-register.php');
+    header('Location: ../landingPage/pas-register.php');
     exit();
 }

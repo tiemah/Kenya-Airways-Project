@@ -46,22 +46,20 @@
 
             <label for="user_id" class="form-label text-dark mt-3">Username:</label>
                 <input type="text" name="username" id="username" class="form-control" placeholder="e.g John" required>
-                <span class="error-message" id="username-error">Username should be in correct format</span>
+                <!-- <span class="error-message" id="username-error">Username should be in correct format</span> -->
 
             <label for="email_id" class="form-label text-dark mt-3">Email- address:</label>
                 <input type="text" name="email_id" id="email_id" placeholder="e.g john@gmail.com"  class="form-control" required>
-                <span class="error-message" id="email-error">Email should be in correct format
-                   
-                    </span>
+                <!-- <span class="error-message" id="email-error">Email should be in correct format</span> -->
 
                     <label for="password" class="form-label text-dark mt-3">Password:</label>
                     <input type="password" name="password" id="password"  class="form-control" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                            placeholder="Enter Your Password">
-                    <span class="error-message" id="password-error">Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
+                    <!-- <span class="error-message" id="password-error">Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span> -->
 
             <label for="password_repeat" class="form-label text-dark mt-3">Confirm password:</label>
                     <input type="password" name="password_repeat" placeholder="Repeat Your Password" id="password_repeat" class="form-control" required>
-                    <span class="error-message" id="password-repeat-error">Passwords do not match</span>
+                    <!-- <span class="error-message" id="password-repeat-error">Passwords do not match</span> -->
 
                 <input type="submit" class="btn btn-primary mt-5 mx-5" value="SUBMIT" name="signup_submit" style="border-radius: 30px;">
                 <input type="submit" class="btn btn-primary mt-5" value="RESET" style="border-radius:30px;">
@@ -74,7 +72,7 @@
 
 
 
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
         // Get the form and input fields
         var registerForm = document.querySelector("form");
@@ -143,7 +141,7 @@
         });
     });
     
-</script>
+</script> -->
 <?php
     require_once "footer.php";
 ?>
