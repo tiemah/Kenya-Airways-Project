@@ -81,7 +81,7 @@ if(isset($_POST['flight_but']) and isset($_SESSION['adminId'])) {
         } else {      
           $admin_id = $_SESSION['adminId'];  
           mysqli_stmt_bind_param($stmt,'isssssiiiiii',$admin_id,$selectedOption,$selected,$departure,$arrival,$FlightName,$ASeats,$APrice,$BSeats,$BPrice,$CSeats,$CPrice); 
-          mysqli_stmt_execute($stmt); 
+          mysqli_stmt_execute($stmt);
         }
         mysqli_stmt_close($stmt);
         mysqli_close($conn);
