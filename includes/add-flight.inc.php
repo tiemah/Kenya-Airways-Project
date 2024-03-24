@@ -70,7 +70,7 @@ if(isset($_POST['flight_but']) and isset($_SESSION['adminId'])) {
       header('Location: ../add-flight.php?error=destless');
       exit();
     } else {
-          $sql = "INSERT INTO Flights(admin_id,source,destination,departure,arrival,
+          $sql = "INSERT INTO flights(admin_id,source,destination,departure,arrival,
           flightname,Aseats,Aprice,Bseats,Bprice,Cseats,Cprice) VALUES (?,?,?,
           ?,?,?,?,?,?,?,?,?)";
           
