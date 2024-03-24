@@ -5,7 +5,7 @@ include "includes/dbconn.php";
 //The delete page
 if (isset($_POST['delete_flight'])) {
     $FlightId = $_POST['flight_id'];
-    $query = "DELETE FROM Flights WHERE flight_id = ?";
+    $query = "DELETE FROM flights WHERE flight_id = ?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $query)) {
 
@@ -29,14 +29,14 @@ $itemsPerPage = 6;
 $startIndex = ($currentPage - 1) * $itemsPerPage;
 
 // Query to fetch paginated flight data
-$query = "SELECT * FROM Flights ORDER BY flight_id DESC LIMIT $startIndex, $itemsPerPage";
+$query = "SELECT * FROM flights ORDER BY flight_id DESC LIMIT $startIndex, $itemsPerPage";
 $stmt = mysqli_stmt_init($conn);
 mysqli_stmt_prepare($stmt, $query);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 
 // Query to fetch total count of flights
-$totalFlightsQuery = "SELECT COUNT(*) AS total FROM Flights";
+$totalFlightsQuery = "SELECT COUNT(*) AS total FROM flights";
 $totalFlightsResult = mysqli_query($conn, $totalFlightsQuery);
 $totalFlights = mysqli_fetch_assoc($totalFlightsResult)['total'];
 $totalPages = ceil($totalFlights / $itemsPerPage);
@@ -144,7 +144,7 @@ $totalPages = ceil($totalFlights / $itemsPerPage);
                         <tbody>
                             <?php 
                                 //select items from database
-                                $query = "SELECT * FROM Flights ORDER BY flight_id ASC LIMIT $startIndex, $itemsPerPage";
+                                $query = "SELECT * FROM flights ORDER BY flight_id ASC LIMIT $startIndex, $itemsPerPage";
                                 $stmt = mysqli_stmt_init($conn);
                                 mysqli_stmt_prepare($stmt, $query);
                                 mysqli_stmt_execute($stmt);
