@@ -63,6 +63,7 @@
 
                 <input type="submit" class="btn btn-primary mt-5 mx-5" value="SUBMIT" name="signup_submit" style="border-radius: 30px;">
                 <input type="submit" class="btn btn-primary mt-5" value="RESET" style="border-radius:30px;">
+                <p class="text-dark my-5">Already registered? <a href="./pas-login.php">Login</a></p> 
 
 
         </form>  
