@@ -89,8 +89,8 @@ Your input matters to us!
                         </div>
                         <div class="ms-3">
                             <h5 class="text-dark">Mobile</h5>
-                            <!-- <p class="mb-0 text-dark">+254 746 603906</p> -->
-                            <a href="tel: 0792899313">Call us</a>
+                            
+                            <a href="tel: 0712345678" style="color: whitesmoke;">Call us</a>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -100,7 +100,7 @@ Your input matters to us!
                         <div class="ms-3">
                             <h5 class="text-dark">Email</h5>
                             <!-- <p class="mb-0">info@example.com</p> -->
-                            <a href="mailto: doreentiema87@gmail.com">Email </a>
+                            <a href="mailto: info@kq.co.ke" style="color: whitesmoke;">Email </a>
                         </div>
                     </div>
                 </div>

@@ -14,8 +14,8 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel: 0712345678" style="color: whitesmoke;">Call us</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="mailto: info@kq.co.ke" style="color: whitesmoke;">info@kq.co.ke </a></p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="https://twitter.com/Dorinah17"><i class="fab fa-twitter"></i></a>
                         <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a> -->
@@ -48,11 +48,11 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <h4 class="text-white mb-3">Join us Today</h4>
+                    <p>Register with us to enjoy flight services from the comfort of your home.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <!-- <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"> -->
+                        <button type="button" class="btn btn-primary "><a href="pas-register.php" class="text-light">Sign Up</a></button>
                     </div>
                 </div>
             </div>
@@ -68,8 +68,8 @@
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
                             <a href="index.php">Home</a>
-                            <a href="help.php">Help</a>
-                            <a href="">FQAs</a>
+                            <!-- <a href="help.php">Help</a> -->
+                            <!-- <a href="">FQAs</a> -->
                         </div>
                     </div>
                 </div>
