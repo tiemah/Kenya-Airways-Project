@@ -67,11 +67,11 @@ if(isset($_POST['signup_submit'])) {
                         header('Location: ../admin.php?login=success');
                         exit();
                     } else {
-                        header('Location: ../admin-login.php?error=sqlerror');
+                        header('Location: ../landingPage/admin-login.php?error=sqlerror');
                         exit();
                     }
                 } else {
-                    header('Location: ../admin-login.php?error=invalidcred');
+                    header('Location: ../landingPage/admin-login.php?error=invalidcred');
                     exit();
                 }
             }

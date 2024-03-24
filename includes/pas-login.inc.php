@@ -15,7 +15,7 @@ if(isset($_POST['login_but'])) {
         if($row = mysqli_fetch_assoc($result)) {
             $pwd_check = password_verify($password,$row['password']);
             if($pwd_check == false) {
-                header('Location: ../pas-login.php?error=wrongpwd');
+                header('Location: ../landingPage/pas-login.php?error=wrongpwd');
                 exit();    
             }
             else if($pwd_check == true) {
@@ -32,14 +32,14 @@ if(isset($_POST['login_but'])) {
                 exit();                    
             }
         }
-        header('Location: ../pas-login.php?error=invalidcred');
+        header('Location: ../landingPage/pas-login.php?error=invalidcred');
         exit();         
     }
-    header('Location: ../pas-login.php?error=invalidcred');
+    header('Location: ../landingPage/pas-login.php?error=invalidcred');
     exit();      
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 } else {
-    header('Location: ../pas-login.php');
+    header('Location: ../landingPage/pas-login.php');
     exit();  
 }    
