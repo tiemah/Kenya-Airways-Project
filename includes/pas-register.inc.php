@@ -75,3 +75,4 @@ if (isset($_POST['signup_submit'])) {
     header('Location: ../landingPage/pas-register.php');
     exit();
 }
+?>
