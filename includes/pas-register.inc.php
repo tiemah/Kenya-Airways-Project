@@ -75,4 +75,19 @@ if (isset($_POST['signup_submit'])) {
     header('Location: ../landingPage/pas-register.php');
     exit();
 }
-?>
+
+
+if($stmt){
+            ?>
+            <!-- sweetalert link -->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+            
+            <script>
+                swal("Good job!", "Registration successful!", "success");
+                </script>
+           
+                <?php
+                 header('Location: ../landingPage/pas-login.php');
+    
+}
+    ?>
