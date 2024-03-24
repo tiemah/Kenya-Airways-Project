@@ -51,7 +51,7 @@ if(isset($_GET['error'])) {
                 <!-- <input type="password" name="user_pass" id="user_pass" placeholder="Enter your password"  required> -->
 
                 <input type="submit" class="btn btn-primary mt-5 mx-5" value="SUBMIT" name="login_but" style="border-radius: 30px;">
-                <input type="submit" class="btn btn-primary mt-5" value="RESET" style="margin-left: 250px; border-radius:30px;">
+                <input type="submit" class="btn btn-primary mt-5" value="RESET" style="border-radius:30px;">
 
                 <!-- <p class="text-dark my-5">Not registered? <a href="register.php">Register Today</a></p>     -->
         </form>

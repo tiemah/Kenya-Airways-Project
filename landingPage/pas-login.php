@@ -25,22 +25,14 @@ if(isset($_GET['error'])) {
 </head>
 <body>
    <?php
-    require_once "./navbar.php";
-    require_once "./header.php";
+    require_once "navbar.php";
+    require_once "header.php";
    
 ?>
 
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white mb-3 animated slideInDown">Enjoy Your Flights With Us</h1>
-                        <p class="fs-4 text-white mb-4 animated slideInDown">Book a flight with us today and experience the best services!</p>
-                        <!-- <div class="position-relative w-75 mx-auto animated slideInDown">
-                            <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: The Netherlands">
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
-                        </div> -->
-                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +55,7 @@ if(isset($_GET['error'])) {
                 <input type="password" name="user_pass" class="form-control" minlength="4" maxlength="12" placeholder="e.g 12234@ke" required>
 
                 <input type="submit" class="btn btn-primary mt-5 mx-5" value="SUBMIT" name="login_but" style="border-radius: 30px;">
-                <input type="submit" class="btn btn-primary mt-5" value="RESET" style="margin-left: 250px; border-radius:30px;">
+                <input type="submit" class="btn btn-primary mt-5" value="RESET" style="border-radius:30px;">
 
                 <p class="text-dark my-5">Not registered? <a href="register.php">Register Today</a></p>    
         </form>
